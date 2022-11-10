@@ -1,7 +1,7 @@
 import os
 import csv
 
-csvpath = "Resources/budget_data.csv"
+csvpath = ".\\PyBank\\Resources\\budget_data.csv"
 
 with open(csvpath) as csvfile:
 
@@ -49,11 +49,11 @@ Financial Analysis
 Total Months: {monthscount}
 Total: ${totalprofit:,}
 Average Change: ${averagechange:,.2f}
-Greatest Increase in Profits: {greatestincreasemonth} (${greatestincrease})
-Greatest Decrease in Profits: {greatestdecreasemonth} (${greatestdecrease})
+Greatest Increase in Profits: {greatestincreasemonth} (${greatestincrease:,})
+Greatest Decrease in Profits: {greatestdecreasemonth} (${greatestdecrease:,})
 """ 
 
 print(output)
 
-with open("Analysis/budget_analysis.txt", "w") as outputfile:
+with open(".\\PyBank\\Analysis\\budget_analysis.txt", "w") as outputfile:
     outputfile.write(output)

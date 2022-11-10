@@ -1,13 +1,10 @@
 import os
 import csv
-print(os.getcwd())
+
 csvpath = ".\\PyPoll\\Resources\\election_data.csv"
 
 totalvotes = 0
 votepercent = 0
-# charlesvotes = 0
-# dianavotes = 0
-# raymondvotes = 0
 
 candidatelist = []
 
@@ -49,7 +46,7 @@ for candidatename in candidatelist:
         winner = candidatename
         winningvotes = votes
     votepercent = votes / totalvotes * 100
-    output += f"{candidatename}: {votepercent:,.2f}% ({votes}) \n" 
+    output += f"{candidatename}: {votepercent:,.3f}% ({votes}) \n" 
 output += "------------------------- \n"
 output += f"Winner: {winner} \n"
 output += "-------------------------"
